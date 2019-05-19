@@ -54,3 +54,6 @@ Install-ChocolateyVsixPackage PowerShellTools http://visualstudiogallery.msdn.mi
 
 # Filesystem
 New-Item -Path C:\ -Name Temp -ItemType Directory
+
+# To Execute
+http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/vstock28021/boxstarter-dev/master/boxstarter-dev-config.ps1
