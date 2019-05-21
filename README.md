@@ -7,7 +7,7 @@ if (Test-PendingReboot) { Invoke-Reboot }
 
 # Windows Options:
 Set-WindowsExplorerOptions -EnableShowFileExtenstions -EnableShowFullPathInTitleBar<br>
-Enable-RemoteDesktop
+Enable-RemoteDesktop  
 Enable-PSRemoting -Force  
 Update-ExecutionPolicy RemoteSigned  
 Disable-BingSearch  
@@ -57,6 +57,8 @@ MsSqlServerManagementStudio2014Express
 sql-server-management-studio (Version 18)  
 VisualStudio2013Professional -InstallArguments "WebTools"  
 wsl-ubuntu-1804  
+PyCharm  
+Intelli J IdeaC
 logparser  
 fiddler4  
 PhantomJS  

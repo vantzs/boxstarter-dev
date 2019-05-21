@@ -151,6 +151,8 @@ choco install MsSqlServerManagementStudio2014Express
 choco install sql-server-management-studio
 choco install VisualStudio2013Professional -InstallArguments "WebTools"
 choco install wsl-ubuntu-1804
+choco install pycharm-community
+choco install intellijidea-community
 
 # Investigating/Testing
 choco install logparser
