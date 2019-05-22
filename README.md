@@ -58,7 +58,8 @@ sql-server-management-studio (Version 18)
 VisualStudio2013Professional -InstallArguments "WebTools"  
 wsl-ubuntu-1804  
 PyCharm  
-Intelli J IdeaC
+Intelli J IdeaC  
+Git  
 logparser  
 fiddler4  
 PhantomJS  

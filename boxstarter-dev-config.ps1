@@ -153,6 +153,7 @@ choco install VisualStudio2013Professional -InstallArguments "WebTools"
 choco install wsl-ubuntu-1804
 choco install pycharm-community
 choco install intellijidea-community
+choco install git
 
 # Investigating/Testing
 choco install logparser
