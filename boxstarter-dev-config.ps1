@@ -11,7 +11,7 @@ Disable-BingSearch
 Disable-GameBarTips
 
 # Setting Time Zone
-Write-BoxstarterMessage "Setting time zone to Central Standard Time"
+Write-BoxstarterMessage "Setting time zone to Eastern Standard Time"
 & C:\Windows\system32\tzutil /s "Eastern Standard Time"
 
 # Set Windows power options
