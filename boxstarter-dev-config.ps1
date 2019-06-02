@@ -12,7 +12,7 @@ Disable-GameBarTips
 
 # Setting Time Zone
 Write-BoxstarterMessage "Setting time zone to Central Standard Time"
-& C:\Windows\system32\tzutil /s "Central Standard Time"
+& C:\Windows\system32\tzutil /s "Eastern Standard Time"
 
 # Set Windows power options
 Write-BoxstarterMessage "Setting Standby Timeout to Never"
