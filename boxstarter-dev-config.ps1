@@ -3,11 +3,32 @@ $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
 Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+Set-StartScreenOptions -EnableBootToDesktop
 Enable-RemoteDesktop
-Enable-PSRemoting -Force
 Update-ExecutionPolicy RemoteSigned
+cinst TelnetClient -source windowsfeatures
 Disable-BingSearch
 Disable-GameBarTips
+
+# Setting Time Zone
+Write-BoxstarterMessage "Setting time zone to Central Standard Time"
+& C:\Windows\system32\tzutil /s "Central Standard Time"
+
+# Set Windows power options
+Write-BoxstarterMessage "Setting Standby Timeout to Never"
+powercfg -change -standby-timeout-ac 0
+powercfg -change -standby-timeout-dc 0
+
+Write-BoxstarterMessage "Turning off Windows Hibernation"
+powercfg -h off
+ 
+Write-BoxstarterMessage "Setting Monitor Timeout to 20 minutes"
+powercfg -change -monitor-timeout-ac 20
+powercfg -change -monitor-timeout-dc 20
+ 
+Write-BoxstarterMessage "Setting Disk Timeout to Never"
+powercfg -change -disk-timeout-ac 0
+powercfg -change -disk-timeout-dc 0
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
@@ -143,13 +164,9 @@ if (Test-PendingReboot) { Invoke-Reboot }
 choco install powershell4
 
 # Dev Tools
-choco install SourceCodePro
 choco install git-fork
 choco install notepadplusplus.install
 choco install SourceTree
-choco install MsSqlServerManagementStudio2014Express
-choco install sql-server-management-studio
-choco install VisualStudio2013Professional -InstallArguments "WebTools"
 choco install wsl-ubuntu-1804
 choco install pycharm-community
 choco install intellijidea-community
@@ -159,7 +176,6 @@ choco install git
 choco install logparser
 choco install fiddler4
 choco install PhantomJS
-choco install sysinternals
 
 # Productivity
 choco install GoogleChrome
@@ -180,6 +196,7 @@ choco install vlc
 choco install cyberduck
 choco install OptiPNG
 choco install mremoteng
+choco install mobaxterm
 
 # Platforms
 choco install flashplayerplugin
